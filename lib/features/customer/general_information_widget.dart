@@ -72,7 +72,7 @@ class _GeneralInformationWidgetState extends State<GeneralInformationWidget> {
                             ),
                           ),
                           SizedBox(height: 4,),
-                          RatingBar(
+                          RatingBar.builder(
                             initialRating: widget.data.numberFavorite.toDouble(),
                             minRating: 1,
                             direction: Axis.horizontal,

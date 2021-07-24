@@ -194,7 +194,7 @@ class _CustomerPageState extends State<CustomerPage> {
                         color: Colors.blue
                     ),),
                     Text(data.address),
-                    RatingBar(
+                    RatingBar.builder(
                       initialRating: data.numberFavorite.toDouble(),
                       minRating: 1,
                       direction: Axis.horizontal,

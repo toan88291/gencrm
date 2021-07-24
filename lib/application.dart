@@ -9,7 +9,14 @@ class Application extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: DynamicTheme.of(context).themeData,
+      theme: ThemeData (
+        platform: TargetPlatform.android,
+        pageTransitionsTheme: const PageTransitionsTheme(
+          builders: <TargetPlatform, PageTransitionsBuilder>{
+            TargetPlatform.android: ZoomPageTransitionsBuilder(),
+          },
+        ),
+      ),
       routes: {
         'splash': (context) => SplashScreen(),
         'main': (context) => MainPage(),
